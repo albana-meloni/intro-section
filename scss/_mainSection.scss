@@ -1,0 +1,47 @@
+.main {
+  text-align: center;
+  margin: auto;
+  &__img-mobile {
+    display: block;
+    margin: $spacing/2 0 $spacing*2;
+  }
+  &__img-desktop {
+    display: none;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  p {
+    color: map-get($map: $main-colors, $key: medium-gray);
+    margin: $spacing;
+  }
+  .clients {
+    @include flexRow;
+    justify-content: space-around;
+    margin: $spacing*3 0;
+    img {
+      display: inline-block;
+      &:nth-child(1) {
+        width: 80px;
+      }
+      &:nth-child(2) {
+        width: 50px;
+      }
+      &:nth-child(n+3) {
+        width: 60px;
+      }
+    }
+  }
+  .attribution {
+    text-align: center;
+    font-size: 0.8em;
+    height: 30px;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    a {
+      color: hsl(240, 100%, 30%);
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+ul,
+ol {
+  list-style: none; }
+
+html::-webkit-scrollbar {
+  display: none; }
+
+::selection {
+  background-color: #141414;
+  color: #fafafa; }
+
+body {
+  min-height: 100vh;
+  position: relative;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: #fafafa;
+  color: #141414; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+  a:hover {
+    color: #141414; }
+
+img,
+picture {
+  max-width: 100%;
+  display: block; }
+
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+
+body {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 1em; }
+
+body {
+  overflow-x: hidden; }
+
+.header {
+  position: relative; }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: dimgray; }
+  .navbar__brand {
+    color: #141414; }
+  .navbar__btn {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer; }
+    .navbar__btn#navbarBtnClose {
+      position: absolute;
+      top: 1rem;
+      right: 1rem; }
+  .navbar__collapse {
+    animation: fade-out 0.3s forwards; }
+    .navbar__collapse[data-navbar="close"] {
+      display: none; }
+    .navbar__collapse[data-navbar="open"] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      background-color: white;
+      height: 100vh;
+      width: 65vw;
+      z-index: 100;
+      padding: 3rem 1rem 0;
+      box-shadow: -150px 0px 0px 0px rgba(0, 0, 0, 0.75);
+      animation: fade-in 0.3s forwards; }
+  .navbar__ul {
+    margin: 0;
+    padding: 1rem 0;
+    z-index: 10; }
+    .navbar__ul li {
+      padding: 0.5rem 0; }
+    .navbar__ul .dropdown {
+      z-index: 10; }
+      .navbar__ul .dropdown img {
+        display: inline-block;
+        width: fit-content; }
+      .navbar__ul .dropdown__arrow {
+        margin: 0 0 2px 10px; }
+      .navbar__ul .dropdown ul {
+        width: 100%;
+        height: 0;
+        display: none;
+        transition: 0.5s;
+        margin-top: 1rem;
+        animation: height-in 0.3s; }
+        .navbar__ul .dropdown ul li {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center; }
+          .navbar__ul .dropdown ul li img {
+            margin-right: 1rem;
+            width: 17px; }
+  .navbar__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  90% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.btn {
+  display: inline-block;
+  padding: 0.7em 1rem;
+  text-align: center;
+  border-radius: 15px;
+  transition: 0.3s; }
+
+.btn-primary {
+  color: #fafafa;
+  background-color: #141414;
+  border: 2px solid #141414; }
+  .btn-primary:hover {
+    background-color: #fafafa;
+    border: 2px solid #141414; }
+
+.btn-secondary {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #fafafa;
+  border: 2px solid dimgray; }
+  .btn-secondary:hover {
+    border: 2px solid #141414; }
+
+.main {
+  text-align: center;
+  margin: auto; }
+  .main__img-mobile {
+    display: block;
+    margin: 0.5rem 0 2rem; }
+  .main__img-desktop {
+    display: none; }
+  .main h2 {
+    font-size: 2em; }
+  .main p {
+    color: dimgray;
+    margin: 1rem; }
+  .main .clients {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+    margin: 3rem 0; }
+    .main .clients img {
+      display: inline-block; }
+      .main .clients img:nth-child(1) {
+        width: 80px; }
+      .main .clients img:nth-child(2) {
+        width: 50px; }
+      .main .clients img:nth-child(n+3) {
+        width: 60px; }
+  .main .attribution {
+    text-align: center;
+    font-size: 0.8em;
+    height: 30px;
+    width: 100%;
+    z-index: 1;
+    display: block; }
+    .main .attribution a {
+      color: #000099;
+      text-decoration: underline; }

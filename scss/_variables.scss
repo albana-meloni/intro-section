@@ -1,0 +1,20 @@
+$main-colors: (
+  almost-white: hsl(0, 0%, 98%),
+  medium-gray: hsl(0, 0%, 41%),
+  almost-black: hsl(0, 0%, 8%)
+);
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+$spacing: 1rem;
