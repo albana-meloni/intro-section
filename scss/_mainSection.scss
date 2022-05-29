@@ -32,16 +32,17 @@
       }
     }
   }
-  .attribution {
-    text-align: center;
-    font-size: 0.8em;
-    height: 30px;
-    width: 100%;
-    z-index: 1;
-    display: block;
-    a {
-      color: hsl(240, 100%, 30%);
-      text-decoration: underline;
-    }
+}
+
+.attribution {
+  text-align: center;
+  font-size: 0.8em;
+  height: 30px;
+  width: 100%;
+  z-index: 1;
+  display: block;
+  a {
+    color: hsl(240, 100%, 30%);
+    text-decoration: underline;
   }
 }

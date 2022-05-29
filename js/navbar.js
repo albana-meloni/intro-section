@@ -20,13 +20,13 @@ let dropdownArrow1 = document.getElementById("dropdownArrow1");
 let dropdownArrow2 = document.getElementById("dropdownArrow2");
 
 dropdownLink1.addEventListener('click', function() {
-  if (dropdownList1.style.height ===  '100%'){
+  if (dropdownList1.style.height ===  'auto'){
     dropdownList1.style.height = '0';
     dropdownList1.style.display = 'none';
     dropdownList1.style.animation = 'fade-out 0.3s';
     dropdownArrow1.style.transform = 'rotate(0deg)';
   }else {
-    dropdownList1.style.height = '100%';
+    dropdownList1.style.height = 'auto';
     dropdownList1.style.display = 'block';
     dropdownList1.style.animation = 'fade-in 0.3s';
     dropdownArrow1.style.transform = 'rotate(180deg)';
@@ -34,13 +34,13 @@ dropdownLink1.addEventListener('click', function() {
 });
 
 dropdownLink2.addEventListener('click', function() {
-  if (dropdownList2.style.height ===  '100%'){
+  if (dropdownList2.style.height ===  'auto'){
     dropdownList2.style.display = 'none';
     dropdownList2.style.height = '0';
     dropdownList2.style.animation = 'fade-out 0.3s';
     dropdownArrow2.style.transform = 'rotate(0deg)';
   }else {
-    dropdownList2.style.height = '100%';
+    dropdownList2.style.height = 'auto';
     dropdownList2.style.display = 'block';
     dropdownList2.style.animation = 'fade-in 0.3s';
     dropdownArrow2.style.transform = 'rotate(180deg)';

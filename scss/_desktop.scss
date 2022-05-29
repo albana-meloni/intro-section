@@ -1,0 +1,117 @@
+@media only screen and (min-width: 1024px) {
+  header {
+    height: 70px;
+  }
+  .navbar {
+    padding: $spacing*2;
+    justify-content: flex-start;
+    height: 70px;
+    &__btn {
+      display: none;
+    }
+    &__collapse {
+      @include flexRow;
+      width: 100vw;
+    }
+    &__ul {
+      @include flexRow;
+      margin-left: $spacing*3;
+      li {
+        padding-right: $spacing*2;
+      }
+      .dropdown {
+        position: relative;
+        img {
+          margin-left: 3px;
+        }
+        ul {
+          position: absolute;
+          background-color: map-get($map: $main-colors, $key: almost-white);
+          border-radius: 10px;
+          box-shadow: 3px 3px 1em rgba($color: map-get($map: $main-colors, $key: almost-black), $alpha: 0.2);
+          padding: $spacing 0 $spacing 1.5em;
+          &#dropdownList {
+            &1 {
+              right: $spacing*2;
+              width: 180px;
+            }
+            &2 {
+              width: 132px;
+              padding-left: 1.6em;
+            }
+          } 
+        }
+      }
+    }
+    &__footer {
+      flex-direction: row;
+      padding-top: 0;
+      .btn-secondary {
+        margin-left: $spacing*2;
+      }
+    }
+  }
+
+  .main {
+    @include flexRow;
+    margin: $spacing*2 100px;
+    height: calc(100vh - 110px);
+    .img-desktop {
+      width: 80%;
+      height: 80vh;
+    }
+    &__img{
+      &-mobile {
+        display: none;
+      }
+      &-desktop {
+        display: inline-block;
+        width: 80%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &__content {
+      @include flexColumn;
+      text-align: left;
+      height: 90vh;
+      width: 60%;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      padding-top: 80px;
+      h2 {
+        font-size: 3em;
+        line-height: 1;
+      }
+      p {
+        margin: $spacing*2 0;
+      }
+    }
+    .clients {
+      width: 90%;
+      margin-top: $spacing*6;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .main {
+    @include flexRow;
+    &__content {
+      height: 600px;
+      justify-content: space-between;
+    }
+    &__img-desktop {
+      width: 80%;
+    }
+    h2 {
+      font-size: 6em;
+    }
+    p {
+      width: 70%;
+      font-size: 1.1em;
+    }
+  }
+
+}
