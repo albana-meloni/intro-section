@@ -23,7 +23,6 @@ body {
     }
   }
   &__collapse {
-    animation: fade-out 0.3s forwards;
     &[data-navbar="close"] {
       display: none;
     }
@@ -88,13 +87,5 @@ body {
   }
   90% {
     opacity: 1;
-  }
-}
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }

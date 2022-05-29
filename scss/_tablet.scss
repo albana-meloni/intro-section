@@ -1,0 +1,11 @@
+@media only screen and (min-width: 768px) {
+  .main__img-mobile {
+    width: 80%;
+    margin: $spacing/2 auto $spacing*2;
+  }
+  .navbar__collapse {
+    &[data-navbar="open"] {
+      box-shadow: -500px 0px 0px 0px rgba(0, 0, 0, 0.75);
+    }
+  }
+}
