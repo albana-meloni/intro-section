@@ -81,7 +81,24 @@ body {
   padding: 1rem;
   color: dimgray; }
   .navbar__brand {
-    color: #141414; }
+    color: #141414;
+    position: relative; }
+    .navbar__brand::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 100px;
+      background: #fafafa;
+      bottom: -25px;
+      left: 0;
+      border: 2px solid #fafafa;
+      transform: translateX(-50px) rotate(45deg);
+      transition: transform 700ms ease 0s; }
+    .navbar__brand:hover {
+      background: transparent;
+      border-color: #fafafa; }
+      .navbar__brand:hover::before {
+        transform: translateX(250px) rotate(45deg); }
   .navbar__btn {
     background: transparent;
     border: 0;

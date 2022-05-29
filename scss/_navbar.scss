@@ -10,6 +10,27 @@ body {
   color: map-get($map: $main-colors, $key: medium-gray);
   &__brand {
     color: map-get($map: $main-colors, $key: almost-black);
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 100px;
+      background: map-get($map: $main-colors, $key: almost-white);
+      bottom: -25px;
+      left: 0;
+      border: 2px solid map-get($map: $main-colors, $key: almost-white);
+      transform: translateX(-50px) rotate(45deg);
+      transition: transform 700ms ease 0s;
+    }
+    &:hover {
+      background: transparent;
+      border-color: map-get($map: $main-colors, $key: almost-white);
+
+      &::before {
+        transform: translateX(250px) rotate(45deg);
+      }
+    }
   }
   &__btn {
     background: transparent;
